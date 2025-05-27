@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7C21698-6AEF-4DEC-823B-C7C196499DA3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HangMan</RootNamespace>
+    <AssemblyName>HangMan</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LevelCleared.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LevelCleared.Designer.cs">
+      <DependentUpon>LevelCleared.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels.Designer.cs">
+      <DependentUpon>Levels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LevelCleared.resx">
+      <DependentUpon>LevelCleared.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels.resx">
+      <DependentUpon>Levels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ugga_dome_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_Warrior_Idle_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game_background_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orc11.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l1_sky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_game_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_game_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heart Stage 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l1_sky1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hp bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\healthbar\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\healthbar\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\healthbar\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\healthbar\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\healthbar\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map02_preview-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\level3\dead.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hang Man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adventurenow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_Warrior_Idle_0001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_Minotaur_Idle_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firstpage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level1incomplete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level2incomplete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level3incomplete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level4incomplete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level5incomplete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_Goblin_Idle_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wraith_03_Idle_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_Ogre_Idle_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_Minotaur_Idle_0001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_Orc_Idle_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear reward_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Level Failed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level1complete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level2complete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level3complete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level4complete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level5complete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pausesetting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgmusic2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\level2\retreating.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
